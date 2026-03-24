@@ -109,9 +109,10 @@ print(f"Corpus contains {len(corpus)} documents.")
 # and stripping common punctuation. We also filter out very short tokens (length <= 2).
 # This simple tokenizer is sufficient for our small, controlled corpus.
 # Use the string strip() method to remove punctuation from the beginning and end of each token.
+STOPWORDS = {"the", "and", "a", "an", "in", "on", "at", "with", "near", "across", "has"}
 def tokenize(text: str) -> list[str]:
     tokens = text.lower().split()
-    return [t.strip(".,:;!?()[]\"'") for t in tokens if len(t) > 2]
+    return [t.strip(".,:;!?()[]\"'") for t in tokens if len(t) > 2 and t not in STOPWORDS]
 
 
 # Define a new empty list to hold the token records we will create.

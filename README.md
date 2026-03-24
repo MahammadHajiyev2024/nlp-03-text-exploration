@@ -257,6 +257,10 @@ shape: (10, 2)
 - Which words seem **interchangeable** based on how they are used?
 - What **patterns** help infer meaning from the data?
 
+
+## Technical Modifications
+- Having visualized token frequency for dog category, I noticed the top token in this category was the article "the" which is useless contextually for my analysis. I decided to add stop words to eliminate some unnecessary words.
+
 ## General Insights
 
 These categories are artificial and were chosen to illustrate the process.
